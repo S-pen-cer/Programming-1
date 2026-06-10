@@ -19,10 +19,22 @@ def shopping_list(self):
         price=float(input("Please enter price"))
         quantity=int(input("Please enter quantity"))
         cost=price*quantity
-        print(f"Item: {item}, Total Cost: {cost}")
+        Registry.Cost=cost
+        print(f"Item: {item}, Total Cost: {Registry.Cost}")
         #this works, for now; now to think how to connect this to status
 
-#def status_update(self):
+def status_update(self):
+    #message = "" would this work, instead of a class variable?
+    if Registry.Cost >= 500:
+        Registry.message="Pending"
+    else:
+        Registry.message="Approved"
+
+    print(Registry.message)
+
+status_update(registry1
+              )#might need more tinkering, output doesn't reflect intention I think
+
 
 shopping_list(registry1)
 
