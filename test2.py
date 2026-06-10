@@ -1,4 +1,5 @@
-from test1 import Registry
+from test1 import Registry, registry1
+
 '''
 Staff_Info = []
 def add_requisition (self):
@@ -11,11 +12,18 @@ def add_requisition (self):
 
 add_requisition(Staff_Info)
 '''
-
+#tried something previously, might come back later, this is still a draft
 def shopping_list(self):
     for si in Registry.staff_info:
-        input("Please enter item")
-        float(input("Please enter price"))
-        int(input("Please enter quantity"))
+        item=input("Please enter item")
+        price=float(input("Please enter price"))
+        quantity=int(input("Please enter quantity"))
+        cost=price*quantity
+        print(f"Item: {item}, Total Cost: {cost}")
+        #this works, for now; now to think how to connect this to status
+
+#def status_update(self):
+
+shopping_list(registry1)
 
 
